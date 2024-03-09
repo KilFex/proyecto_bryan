@@ -1,19 +1,23 @@
 package clases;
 
-public class Producto {
-	private int codigo, stockActual, stockMinimo, stockMaximo;
+public class Producto extends Almacen {
+	private int codigo;
 	String nombre;
 	double precio;
 	
 	
 	public Producto(int codigo, int stockActual, int stockMinimo, int stockMaximo, String nombre, double precio) {
+		super(stockActual, stockMinimo, stockMaximo);
 		this.codigo = codigo;
-		this.stockActual = stockActual;
-		this.stockMinimo = stockMinimo;
-		this.stockMaximo = stockMaximo;
 		this.nombre = nombre;
 		this.precio = precio;
 	}
+
+
+
+ 
+		// TODO Auto-generated constructor stub
+	
 
 
 	public int getCodigo() {
@@ -24,38 +28,7 @@ public class Producto {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-
-
-	public int getStockActual() {
-		return stockActual;
-	}
-
-
-	public void setStockActual(int stockActual) {
-		this.stockActual = stockActual;
-	}
-
-
-	public int getStockMinimo() {
-		return stockMinimo;
-	}
-
-
-	public void setStockMinimo(int stockMinimo) {
-		this.stockMinimo = stockMinimo;
-	}
-
-
-	public int getStockMaximo() {
-		return stockMaximo;
-	}
-
-
-	public void setStockMaximo(int stockMaximo) {
-		this.stockMaximo = stockMaximo;
-	}
-
-
+	
 	public String getNombre() {
 		return nombre;
 	}

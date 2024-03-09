@@ -31,8 +31,15 @@ public class Lista_Productos {
 		producto.add(x);
 		grabarProducto();
 	}
-	
-	public Producto buscarCliente(int codigo) {
+	//cambiando el stockActual por el nuevoStock
+	public void modificarStock(int codigo, int nuevoStock) {
+		for(int i=0; i<tamanio(); i++) {
+			if(obtener(i).getCodigo()== codigo) {
+				obtener(i).setStockActual(nuevoStock);
+			}
+		}
+	}
+	public Producto buscarProducto(int codigo) {
 		for(int i=0; i<tamanio();i++) {
 			if(obtener(i).getCodigo() == codigo) {
 				return obtener(i);

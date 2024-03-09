@@ -259,7 +259,7 @@ public class frmVentas extends JFrame implements ActionListener{
 				textTelefono.setText("" + x.getTelefono());
 				textDni.setText("" + x.getDni());
 				if (codigoProducto.length()>0) {
-					Producto y = lp.buscarCliente(leerCodigoProducto());
+					Producto y = lp.buscarProducto(leerCodigoProducto());
 					if (y != null) {
 						textNombreProducto.setText(y.getNombre());
 						textPrecio.setText("" + y.getPrecio());
